@@ -13,11 +13,6 @@ export default {
       file: pkg.module,
       format: 'es',
     },
-    {
-      file: pkg.browser,
-      format: 'iife',
-      name: 'MyPackage',
-    },
   ],
   external: [...Object.keys(pkg.dependencies || {})],
   plugins: [typescript({ tsconfig: './tsconfig.json' }), terser()],
